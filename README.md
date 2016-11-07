@@ -1,6 +1,6 @@
-# Simple Static Express Server
+# Simple Express Dynamic Content Server
 
-This repo contains a basic Express-based server in `server.js` that demonstrates how to serve static files.  Before doing anything with it you need to install dependencies:
+This repo contains a basic Express-based server in `server.js` that demonstrates how to serve dynamic content.  Before doing anything with it you need to install dependencies:
 ```
 npm install
 ```

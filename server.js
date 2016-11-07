@@ -44,7 +44,9 @@ app.get('/people', function (req, res) {
 });
 
 /*
- * Here, we use a dynamic route to create a page for each person.
+ * Here, we use a dynamic route to create a page for each person.  We use
+ * Express machinery to get the requested person from the URL and then fill
+ * in a template with that person's info.
  */
 app.get('/people/:person', function (req, res, next) {
 
@@ -68,6 +70,7 @@ app.get('/people/:person', function (req, res, next) {
 
     // If we don't have info for the requested person, fall through to a 404.
     next();
+
   }
 
 });
