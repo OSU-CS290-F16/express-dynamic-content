@@ -60,9 +60,9 @@ app.get('/people/:person', function (req, res, next) {
      * Use regular expressions to replace our template patterns with the
      * actual info associated with the given person.
      */
-    content = content.replace(new RegExp('{{{NAME}}}', 'g'), person.name);
-    content = content.replace(new RegExp('{{{JOB}}}', 'g'), person.job);
-    content = content.replace(new RegExp('{{{AGE}}}', 'g'), person.age);
+    content = content.replace(new RegExp('{{name}}', 'g'), person.name);
+    content = content.replace(new RegExp('{{job}}', 'g'), person.job);
+    content = content.replace(new RegExp('{{age}}', 'g'), person.age);
 
     res.send(content);
 
