@@ -5,7 +5,7 @@ var people = require('./people');
 var app = express();
 var port = process.env.PORT || 3000;
 
-var personTemplate = fs.readFileSync(path.join(__dirname, 'templates', 'person.html'), 'utf8');
+var personPageTemplate = fs.readFileSync(path.join(__dirname, 'templates', 'person-page.html'), 'utf8');
 
 // Serve static files from public/.
 app.use(express.static(path.join(__dirname, 'public')));
@@ -54,7 +54,7 @@ app.get('/people/:person', function (req, res, next) {
 
   if (person) {
 
-    var content = personTemplate;
+    var content = personPageTemplate;
 
     /*
      * Use regular expressions to replace our template patterns with the
